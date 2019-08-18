@@ -1,0 +1,87 @@
+  
+  <!-- footer content -->
+    <footer>
+      <div class="pull-right">
+        NodeJs Design by:  <a href="#">Shawn Andre Mbuvi</a>
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+
+  </div><!-- /main_content -->
+  </div><!-- /container_body -->
+
+  <!-- jQuery -->
+  <script src="/vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>  
+  <!-- Bootstrap -->
+  <script src="/vendors/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/vendors/datatables.net/js/jquery.dataTables.min.js" type="text/javascript" ></script>
+
+   <!-- FastClick -->
+  <script src="/vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="/vendors/nprogress/nprogress.js"></script>
+  <!-- Chart.js -->
+  <script src="/vendors/Chart.js/dist/Chart.min.js"></script>
+  <!-- gauge.js -->
+  <script src="/vendors/gauge.js/dist/gauge.min.js"></script>
+  <!-- bootstrap-progressbar -->
+  <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+  <!-- iCheck -->
+  <script src="/vendors/iCheck/icheck.min.js"></script>
+  <!-- Skycons -->
+  <script src="/vendors/skycons/skycons.js"></script>
+  <!-- Flot -->
+  <script src="/vendors/Flot/jquery.flot.js"></script>
+  <script src="/vendors/Flot/jquery.flot.pie.js"></script>
+  <script src="/vendors/Flot/jquery.flot.time.js"></script>
+  <script src="/vendors/Flot/jquery.flot.stack.js"></script>
+  <script src="/vendors/Flot/jquery.flot.resize.js"></script>
+  <!-- Flot plugins -->
+  <script src="/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+  <script src="/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+  <script src="/vendors/flot.curvedlines/curvedLines.js"></script>
+  <!-- DateJS -->
+  <script src="/vendors/DateJS/build/date.js"></script>
+  <!-- JQVMap -->
+  <script src="/vendors/jqvmap/dist/jquery.vmap.js"></script>
+  <script src="/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  <script src="/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+  <!-- bootstrap-daterangepicker -->
+  <script src="/vendors/moment/min/moment.min.js"></script>
+  <script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="/vendors/customcssjs/js/custom.min.js"></script>
+
+  <script>
+      $(document).ready(function() {
+        var t= $("#items-datatable").DataTable({
+           processing: true,
+           serverSide: true,
+           ajax: {
+                url: "/items",
+                 dataSrc: ""
+            },
+            columns: [ 
+                { data : "id" },
+                { data : "name" },
+                { data : "categories_id" },
+                { data : "code" },
+                { data : "quantity" },        
+                { data : "buying_price" },        
+                { data : "selling_price" },
+                { data : "cost_total" },
+                { data : "income_total" },
+                { data : "location" },
+                { data : "description" },
+                { data : "created_at" },
+                { data : "updated_at" }
+             ]    
+           
+         });
+      });
+    </script>
+
+</body>
+</html>
