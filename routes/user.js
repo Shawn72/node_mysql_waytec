@@ -52,6 +52,7 @@ exports.signup = function(req, res){
     }
             
  };
+
  //-----------------------------------------------dashboard page functionality----------------------------------------------
             
  exports.dashboard = function(req, res, next){
@@ -71,6 +72,26 @@ exports.signup = function(req, res){
     });
     
 
+ };
+
+  //-----------------------------------------------filterbydate page functionality----------------------------------------------
+            
+  exports.filterbydate = function(req, res, next){
+            
+    var user =  req.session.user,
+    userId = req.session.userId;
+    console.log('user_Id: '+userId);
+    if(userId == null){
+       res.redirect("/login");
+       return;
+    }
+ 
+    var sql="SELECT * FROM `reactnode_users` WHERE `id`='"+userId+"'";
+              
+    db.query(sql, function(err, result){  
+       res.render('filterbydate.ejs',{data:result});
+    });
+    
  };
  
  //------------------------------------logout functionality----------------------------------------------
@@ -107,3 +128,19 @@ exports.signup = function(req, res){
     });
  };
  
+
+ //---------------------------------------------filtertranascationsbydate page call------------------------------------------------------
+exports.transactionsfilterbydate = function(req, res){
+       var user =  req.session.user,
+    userId = req.session.userId;
+    console.log('user_Id: '+userId);
+    if(userId == null){
+        res.redirect("/login");
+        return;
+    }
+    var sql="SELECT * FROM `reactnode_users` WHERE `id`='"+userId+"'";
+                
+    db.query(sql, function(err, result){  
+    res.render('transactionsfilterbydate.ejs',{data:result});
+    });
+ };

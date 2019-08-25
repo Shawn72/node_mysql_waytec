@@ -16,7 +16,8 @@
   <!-- Bootstrap -->
   <script src="/vendors/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="/vendors/datatables.net/js/jquery.dataTables.min.js" type="text/javascript" ></script>
-
+  <script src="/vendors/dtRes2019/dataTables.rowReorder.min.js" type="text/javascript" ></script>
+  <script src="/vendors/dtRes2019/dataTables.responsive.min.js" type="text/javascript" ></script>
    <!-- FastClick -->
   <script src="/vendors/fastclick/lib/fastclick.js"></script>
   <!-- NProgress -->
@@ -51,37 +52,19 @@
   <script src="/vendors/moment/min/moment.min.js"></script>
   <script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
+  <script src="/vendors/dtePicker2019/bootstrap-datepicker.min.js"></script>
+  <script src="/vendors/dtXport2Doc2019/dataTables.buttons.min.js"></script>
+  <script src="/vendors/dtXport2Doc2019/buttons.flash.min.js"></script>
+  <script src="/vendors/dtXport2Doc2019/jszip.min.js"></script>
+  <script src="/vendors/dtXport2Doc2019/pdfmake.min.js"></script>
+  <script src="/vendors/dtXport2Doc2019/vfs_fonts.js"></script>
+  <script src="/vendors/dtXport2Doc2019/buttons.html5.min.js"></script>
+  <script src="/vendors/dtXport2Doc2019/buttons.print.min.js"></script>
+  <script src="/vendors/dtXport2Doc2019/dataTables.select.min.js"></script>
+
   <!-- Custom Theme Scripts -->
   <script src="/vendors/customcssjs/js/custom.min.js"></script>
-
-  <script>
-      $(document).ready(function() {
-        var t= $("#items-datatable").DataTable({
-           processing: true,
-           serverSide: true,
-           ajax: {
-                url: "/items",
-                 dataSrc: ""
-            },
-            columns: [ 
-                { data : "id" },
-                { data : "name" },
-                { data : "categories_id" },
-                { data : "code" },
-                { data : "quantity" },        
-                { data : "buying_price" },        
-                { data : "selling_price" },
-                { data : "cost_total" },
-                { data : "income_total" },
-                { data : "location" },
-                { data : "description" },
-                { data : "created_at" },
-                { data : "updated_at" }
-             ]    
-           
-         });
-      });
-    </script>
+  <script src="/vendors/customScripts/customScripts.js"></script>
 
 </body>
 </html>

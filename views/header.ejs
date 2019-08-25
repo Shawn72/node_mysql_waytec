@@ -2,8 +2,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Waytec Inventory Transactions</title>
-        <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
-        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/> -->
 
         <!-- template resources -->
 
@@ -20,11 +18,13 @@
         <link href="/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
         
         <!-- bootstrap-progressbar -->
-        <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+        <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet"/>
         <!-- JQVMap -->
         <link href="/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
         <!-- bootstrap-daterangepicker -->
-        <link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        <link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"/>
+
+        <link href="/vendors/dtePicker2019/bootstrap-datepicker3.min.css" rel="stylesheet"/>
 
         <!-- Custom Theme Style -->
         <link href="/vendors/customcssjs/css/custom.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
                             <!-- sidebar menu -->
                             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                                 <div class="menu_section">
-                                    <h3>Wildcard Infor</h3>
+                                    <h3>Waytec Admin Reports</h3>
                                     <ul class="nav side-menu">
                                         <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                                             <ul class="nav child_menu">
@@ -71,10 +71,10 @@
                                             </ul>
                                         </li>                  
                                     
-                                        <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                                        <li><a><i class="fa fa-table"></i> Inventory Reports <span class="fa fa-chevron-down"></span></a>
                                             <ul class="nav child_menu">
-                                                <li><a href="tables.html">Tables</a></li>
-                                                <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                                                <li><a href="/home/filterbydate">All Transactions</a></li>
+                                                <li><a href="/home/transactionsfilterbydate">Date Filter Transactions</a></li>
                                             </ul>
                                         </li>
                                         <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
@@ -171,19 +171,5 @@
                     </nav>
                     </div>
                 </div>
-                <!-- /top navigation --> 
-
-                
-            
-            <!-- <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/home/dashboard">Home</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/home/logout">Logout</a></li>
-                </ul>
-                </div>
-            </div>
-            </nav> -->
+                <!-- /top navigation -->                 
+         
